@@ -1,15 +1,19 @@
 import Link from "next/link";
 import { ToggleTheme } from "../toggle-theme";
 
+const navLinks = ["/on-scroll-reveal", "/svg-anim"];
+
 export default function Sidebar() {
   return (
-    <section className="flex h-full w-[20%] items-center justify-center border-r md:w-[25%]">
-      <div className="flex flex-col gap-40">
-        <Link href="/">Home</Link>
-        <Link href="/on-scroll-reveal">On Scroll Reveal</Link>
-        <div>Contact</div>
-        <ToggleTheme />
+    <section className="flex h-full w-[20%] flex-col items-center justify-between border-r py-10 md:w-[25%]">
+      <div className="flex flex-col gap-5">
+        {navLinks.map((link) => (
+          <Link key={link} href={link} className="hover:underline">
+            {link}
+          </Link>
+        ))}
       </div>
+      <ToggleTheme />
     </section>
   );
 }
