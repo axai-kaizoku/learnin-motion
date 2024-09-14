@@ -4,9 +4,9 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <main className="flex h-screen w-full">
+    <section className="flex h-screen w-full">
       <Sidebar />
-      {children}
-    </main>
+      <div className="p-20">{children}</div>
+    </section>
   );
 }

@@ -202,5 +202,3 @@ const DarkmodeIcon: FC<DarkmodeIconProps> = ({ isDark }) => {
     </motion.div>
   );
 };
-
-export default DarkmodeIcon;
