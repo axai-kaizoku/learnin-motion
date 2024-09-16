@@ -1,13 +1,15 @@
 "use client";
-import { useState } from "react";
 import { Container } from "./_components/helpers/container";
 import LinkButtons from "./_components/helpers/link-buttons";
 import ComponentRenderer from "./_components/helpers/component-render";
+import { useQueryState } from "nuqs";
 
 const overallLinks = ["Basics", "Gestures", "Controls"];
 
 export default function OverAllAnim() {
-  const [selectedComponent, setSelectedComponent] = useState("Basics");
+  const [selectedComponent, setSelectedComponent] = useQueryState("component", {
+    defaultValue: "Basics",
+  });
   return (
     <Container>
       <h1 className="w-full py-4 text-5xl font-thin">Overall Animations.</h1>
