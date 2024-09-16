@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ToggleTheme } from "../toggle-theme";
 
-const navLinks = ["/on-scroll-reveal", "/svg-anim"];
+const navLinks = ["/on-scroll-reveal", "/overall-anim"];
 
 export default function Sidebar() {
   return (
