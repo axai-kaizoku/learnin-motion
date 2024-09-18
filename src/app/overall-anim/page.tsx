@@ -4,7 +4,7 @@ import LinkButtons from "./_components/helpers/link-buttons";
 import ComponentRenderer from "./_components/helpers/component-render";
 import { useQueryState } from "nuqs";
 
-const overallLinks = ["Basics", "Gestures", "Controls"];
+const overallLinks = ["Basics", "Gestures", "Controls", "ViewBased"];
 
 export default function OverAllAnim() {
   const [selectedComponent, setSelectedComponent] = useQueryState("component", {
