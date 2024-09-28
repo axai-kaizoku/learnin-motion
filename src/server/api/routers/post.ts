@@ -10,7 +10,7 @@ interface Post {
 const posts: Post[] = [
   {
     id: 1,
-    name: "Hello World",
+    name: "Unknown Bruh",
   },
 ];
 
