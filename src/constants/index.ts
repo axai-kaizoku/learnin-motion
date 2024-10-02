@@ -3,4 +3,5 @@ export const navLinks = [
   "/overall-anim",
   "/horizontal-scroll",
   "/page-transition",
+  "/parallax-scroll",
 ];

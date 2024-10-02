@@ -15,11 +15,11 @@ const posts: Post[] = [
 ];
 
 export const postRouter = createTRPCRouter({
-  hello: publicProcedure
+  heyy: publicProcedure
     .input(z.object({ text: z.string() }))
     .query(({ input }) => {
       return {
-        greeting: `Hello ${input.text}`,
+        greeting: `Heyy ${input.text}`,
       };
     }),
 
