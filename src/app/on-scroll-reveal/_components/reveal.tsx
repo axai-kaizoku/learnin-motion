@@ -19,6 +19,7 @@ export default function Reveal({ children, width = "w-fit" }: Props) {
       void mainControls.start("visible");
       void slideControls.start("visible");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
   return (
