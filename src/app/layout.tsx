@@ -21,7 +21,7 @@ export default function RootLayout({
       <body>
         <TRPCReactProvider>
           <Providers>
-            <main className="flex h-screen w-full">
+            <main className="h-screen w-full">
               <ScreenSize />
               {children}
             </main>
