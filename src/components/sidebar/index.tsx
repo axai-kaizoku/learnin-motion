@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ToggleTheme } from "../toggle-theme";
-
-const navLinks = ["/on-scroll-reveal", "/overall-anim", "/horizontal-scroll"];
+import { navLinks } from "@/constants";
 
 export default function Sidebar() {
   return (

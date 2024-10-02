@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const ScreenSize = () => {
   return (
-    <div className="fixed bottom-4 right-4 z-[1000] flex h-12 w-12 items-center justify-center rounded-md border">
+    <div className="fixed bottom-4 bg-muted right-4 z-[1000] flex h-12 w-12 items-center justify-center rounded-md ring-1 ring-muted-foreground">
       <Link href="/">
         <div className="block sm:hidden">sm</div>
         {/* Small screens (smaller than 640px) */}
