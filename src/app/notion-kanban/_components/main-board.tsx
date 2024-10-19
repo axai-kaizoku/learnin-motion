@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { DEFAULT_CARDS } from "@/constants";
-import { type Card } from "./card";
 import { Column } from "./column";
 import { BurnBarrel } from "./burn-barrel";
+import type { CardType } from "../_types";
 
 export const Board = () => {
-  const [cards, setCards] = useState<Card[]>(DEFAULT_CARDS);
+  const [cards, setCards] = useState<CardType[]>(DEFAULT_CARDS);
   return (
     <div className="flex h-full w-full gap-6 overflow-scroll p-12">
       <Column
