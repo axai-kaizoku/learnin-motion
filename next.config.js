@@ -12,7 +12,6 @@ const config = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: "export",
   trailingSlash: true,
 };
 
