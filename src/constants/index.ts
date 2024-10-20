@@ -1,4 +1,4 @@
-import { type Card } from "@/app/notion-kanban/_components/card";
+import { type CardType } from "@/app/notion-kanban/_types";
 
 export const navLinks = [
   "/on-scroll-reveal",
@@ -9,7 +9,7 @@ export const navLinks = [
   "/notion-kanban",
 ];
 
-export const DEFAULT_CARDS: Card[] = [
+export const DEFAULT_CARDS: CardType[] = [
   {
     title: "Look into render bug in dashboard",
     id: "1",

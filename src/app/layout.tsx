@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+
+import { AppSidebar } from "@/components/sidebar/app-sidebar";
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -21,10 +25,12 @@ export default function RootLayout({
       <body>
         <TRPCReactProvider>
           <Providers>
-            <main className="h-screen w-full">
-              <ScreenSize />
-              {children}
-            </main>
+            <ScreenSize />
+            <SidebarProvider>
+              <AppSidebar />
+              <SidebarTrigger className="fixed z-[1000000000]" />
+              <main>{children}</main>
+            </SidebarProvider>
           </Providers>
         </TRPCReactProvider>
       </body>

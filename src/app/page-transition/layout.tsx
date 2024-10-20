@@ -27,7 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             clipPath: "polygon(50% 0,50% 0,50% 100%, 50% 100%)",
           },
         }}
-        className="flex justify-center items-center bg-green-700/40 h-screen w-full"
+        className="flex justify-center items-center bg-green-700/40 h-screen w-[100vw]"
       >
         {children}
       </motion.div>

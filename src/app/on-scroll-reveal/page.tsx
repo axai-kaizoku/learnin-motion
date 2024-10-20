@@ -3,10 +3,9 @@ import Reveal from "./_components/reveal";
 
 export default function OnScrollReveal() {
   return (
-    <div className="flex h-[300vh] w-full items-center justify-center">
-      <div className="flex w-[66%] flex-col items-center">
+    <div className="flex h-fit w-full items-center justify-center">
+      <div className="flex w-[70%] flex-col items-center">
         {/* Spacer */}
-
         <div className="h-20" />
         <div className="flex w-full flex-col gap-4">
           <Reveal>
@@ -16,15 +15,12 @@ export default function OnScrollReveal() {
             </h1>
           </Reveal>
           <Reveal>
-            <h3 className="text-4xl font-bold">
-              I&apos; a Full stack developer.
-            </h3>
+            <h3 className="text-4xl font-bold">I&apos; a Full stack developer.</h3>
           </Reveal>
           <Reveal>
             <p className="w-[50%] whitespace-break-spaces">
-              I love to code and learn new things. I&apos; much interested in
-              learning about web development, software engineering, and computer
-              science.
+              I love to code and learn new things. I&apos; much interested in learning
+              about web development, software engineering, and computer science.
             </p>
           </Reveal>
           <Reveal>
@@ -84,11 +80,7 @@ export default function OnScrollReveal() {
                     "Blog Chef is a blogging application. In which you can create a blog, and share it with others. You can add comments to the blog. The main feature is if you post any abusive words in any blog. Then the abusive words will be removed from that blog. Admin can approve the blog after that word will be blurred.",
                 },
               ].map((p, i) => (
-                <ProjectCard
-                  key={i}
-                  title={p.title}
-                  description={p.description}
-                />
+                <ProjectCard key={i} title={p.title} description={p.description} />
               ))}
             </div>
           </div>
@@ -102,9 +94,8 @@ export default function OnScrollReveal() {
           <div className="h-20" />
           <Reveal>
             <span>
-              Here is my email address @02b3akshay@gmail.com. Feel free to
-              contact me. I will be happy to help you out with any questions
-              that you may have.
+              Here is my email address @02b3akshay@gmail.com. Feel free to contact me. I
+              will be happy to help you out with any questions that you may have.
             </span>
           </Reveal>
           <div className="h-20" />
@@ -122,6 +113,7 @@ export default function OnScrollReveal() {
               <span className="text-slate-200 underline">Github</span>
             </Reveal>
           </div>
+          <div className="h-20" />
         </div>
       </div>
     </div>

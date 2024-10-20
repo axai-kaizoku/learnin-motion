@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 
 export default function Explore() {
   return (
-    <>
+    <div className="w-full h-full">
       <NavBar />
       <Hero />
-    </>
+    </div>
   );
 }
 
@@ -24,11 +24,7 @@ const NavBar = () => {
       className="absolute text-black top-0 left-0 right-0 p-6 z-10 flex items-center justify-between"
     >
       <TreePine size="50px" color="#1d3319" />
-      <motion.div
-        initial="hidden"
-        animate="show"
-        className="flex items-center gap-4"
-      >
+      <motion.div initial="hidden" animate="show" className="flex items-center gap-4">
         <Link href="/page-transition">
           <span className="nav-link">Parks</span>
         </Link>
@@ -61,8 +57,8 @@ const Hero = () => {
         </div>
         <h1 className="text-7xl m-0 font-medium">Explore National Parks</h1>
         <p className="m-0 mb-4 text-center max-w-screen-md">
-          Explore Nation Parks is the countries leader for nation park tours.
-          Make your vacation great with one of our amazing tour guides!
+          Explore Nation Parks is the countries leader for nation park tours. Make your
+          vacation great with one of our amazing tour guides!
         </p>
         <div className="flex w-full justify-center items-center">
           <Link href="/page-transition">
