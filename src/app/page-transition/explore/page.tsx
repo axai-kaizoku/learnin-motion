@@ -1,8 +1,8 @@
-"use client";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { TreePine } from "lucide-react";
-import { Button } from "@/components/ui/button";
+"use client"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { TreePine } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function Explore() {
   return (
@@ -10,7 +10,7 @@ export default function Explore() {
       <NavBar />
       <Hero />
     </>
-  );
+  )
 }
 
 const NavBar = () => {
@@ -41,8 +41,8 @@ const NavBar = () => {
         <Link href="/page-transition">Book a tour</Link>
       </motion.div>
     </motion.div>
-  );
-};
+  )
+}
 
 const Hero = () => {
   return (
@@ -74,8 +74,8 @@ const Hero = () => {
       </motion.div>
       <Mountains />
     </div>
-  );
-};
+  )
+}
 
 const Mountains = () => (
   <motion.div
@@ -132,4 +132,4 @@ const Mountains = () => (
       />
     </svg>
   </motion.div>
-);
+)

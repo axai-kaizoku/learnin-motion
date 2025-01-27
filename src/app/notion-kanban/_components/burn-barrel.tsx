@@ -1,28 +1,32 @@
-"use client";
-import { useState } from "react";
+"use client"
+import { useState } from "react"
 
-import { Flame, Trash } from "lucide-react";
-import type { CardType, DragEventType, SetStateType } from "../_types";
+import { Flame, Trash } from "lucide-react"
+import type { CardType, DragEventType, SetStateType } from "../_types"
 
-export const BurnBarrel = ({ setCards }: { setCards: SetStateType<CardType[]> }) => {
-  const [active, setActive] = useState(false);
+export const BurnBarrel = ({
+  setCards,
+}: {
+  setCards: SetStateType<CardType[]>
+}) => {
+  const [active, setActive] = useState(false)
 
   const handleDragOver = (e: DragEventType) => {
-    e.preventDefault();
-    setActive(true);
-  };
+    e.preventDefault()
+    setActive(true)
+  }
 
   const handleDragLeave = () => {
-    setActive(false);
-  };
+    setActive(false)
+  }
 
   const handleDragEnd = (e: DragEventType) => {
-    const cardId = e.dataTransfer.getData("cardId");
+    const cardId = e.dataTransfer.getData("cardId")
 
-    setCards((pv) => pv.filter((c) => c.id !== cardId));
+    setCards((pv) => pv.filter((c) => c.id !== cardId))
 
-    setActive(false);
-  };
+    setActive(false)
+  }
 
   return (
     <div
@@ -33,5 +37,5 @@ export const BurnBarrel = ({ setCards }: { setCards: SetStateType<CardType[]> })
     >
       {active ? <Flame className="animate-bounce" /> : <Trash />}
     </div>
-  );
-};
+  )
+}

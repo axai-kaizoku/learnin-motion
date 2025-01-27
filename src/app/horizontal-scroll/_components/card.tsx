@@ -1,7 +1,7 @@
 type CardType = {
-  url: string;
-  title: string;
-};
+  url: string
+  title: string
+}
 
 export const cards: CardType[] = [
   {
@@ -32,7 +32,7 @@ export const cards: CardType[] = [
     url: "/assets/7.png",
     title: "Title 7",
   },
-];
+]
 
 export const Card = ({ card }: { card: CardType }) => {
   return (
@@ -49,5 +49,5 @@ export const Card = ({ card }: { card: CardType }) => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}

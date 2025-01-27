@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import Reveal from "./_components/reveal";
+import { Button } from "@/components/ui/button"
+import Reveal from "./_components/reveal"
 
 export default function OnScrollReveal() {
   return (
@@ -125,15 +125,15 @@ export default function OnScrollReveal() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 const ProjectCard = ({
   title,
   description,
 }: {
-  title?: string;
-  description?: string;
+  title?: string
+  description?: string
 }) => {
   return (
     <div className="rounded-mdp-4 flex h-fit w-full flex-col gap-2">
@@ -144,5 +144,5 @@ const ProjectCard = ({
         <div>{description}</div>
       </Reveal>
     </div>
-  );
-};
+  )
+}

@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { useRef } from "react";
-import { Layout } from "./helpers/layout";
-import { motion, useInView } from "framer-motion";
+import { useRef } from "react"
+import { Layout } from "./helpers/layout"
+import { motion, useInView } from "framer-motion"
 
 export default function ViewBased() {
-  const ref = useRef(null);
+  const ref = useRef(null)
 
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true })
 
   return (
     <Layout title="ViewBased">
@@ -26,5 +26,5 @@ export default function ViewBased() {
         className={`h-screen border w-full ${isInView ? "bg-red-400" : "bg-blue-400"} duration-1000 transition`}
       />
     </Layout>
-  );
+  )
 }

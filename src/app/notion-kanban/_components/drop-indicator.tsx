@@ -2,8 +2,8 @@ export const DropIndicator = ({
   beforeId,
   column,
 }: {
-  beforeId: string;
-  column: string;
+  beforeId: string
+  column: string
 }) => {
   return (
     <div
@@ -11,5 +11,5 @@ export const DropIndicator = ({
       data-column={column}
       className="my-0.5 h-0.5 w-full bg-violet-400 opacity-0"
     />
-  );
-};
+  )
+}

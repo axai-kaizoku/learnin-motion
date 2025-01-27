@@ -1,26 +1,26 @@
-"use client";
-import React, { useEffect, useRef } from "react";
-import { cn } from "@/lib/utils";
-import { motion, useAnimation, useInView } from "framer-motion";
+"use client"
+import React, { useEffect, useRef } from "react"
+import { cn } from "@/lib/utils"
+import { motion, useAnimation, useInView } from "framer-motion"
 
 type Props = {
-  children: React.JSX.Element;
-  width?: "w-fit" | "w-full";
-};
+  children: React.JSX.Element
+  width?: "w-fit" | "w-full"
+}
 
 export default function Reveal({ children, width = "w-fit" }: Props) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const mainControls = useAnimation();
-  const slideControls = useAnimation();
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  const mainControls = useAnimation()
+  const slideControls = useAnimation()
 
   useEffect(() => {
     if (isInView) {
-      void mainControls.start("visible");
-      void slideControls.start("visible");
+      void mainControls.start("visible")
+      void slideControls.start("visible")
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isInView]);
+  }, [isInView])
 
   return (
     <div ref={ref} className={cn("relative overflow-hidden", width)}>
@@ -46,5 +46,5 @@ export default function Reveal({ children, width = "w-fit" }: Props) {
         className="absolute bottom-1 left-0 right-0 top-1 z-10 bg-muted"
       />
     </div>
-  );
+  )
 }

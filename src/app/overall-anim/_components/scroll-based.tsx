@@ -1,13 +1,13 @@
-"use client";
-import { useScroll, motion, useSpring, useTransform } from "framer-motion";
-import { Layout } from "./helpers/layout";
+"use client"
+import { useScroll, motion, useSpring, useTransform } from "framer-motion"
+import { Layout } from "./helpers/layout"
 
 export default function ScrollBased() {
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll()
 
-  const scaleX = useSpring(scrollYProgress);
+  const scaleX = useSpring(scrollYProgress)
 
-  const background = useTransform(scrollYProgress, [0, 1], ["#ffffff", "#000"]);
+  const background = useTransform(scrollYProgress, [0, 1], ["#ffffff", "#000"])
 
   return (
     <Layout title="Scroll Based">
@@ -152,5 +152,5 @@ export default function ScrollBased() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }

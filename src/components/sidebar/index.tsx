@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { ToggleTheme } from "../toggle-theme";
-import { navLinks } from "@/constants";
+import Link from "next/link"
+import { ToggleTheme } from "../toggle-theme"
+import { navLinks } from "@/constants"
 
 export default function Sidebar() {
   return (
@@ -14,5 +14,5 @@ export default function Sidebar() {
       </div>
       <ToggleTheme />
     </section>
-  );
+  )
 }

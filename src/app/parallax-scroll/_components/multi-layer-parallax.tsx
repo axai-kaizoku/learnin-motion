@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 
 export default function MultiLayerParallax() {
-  const ref = useRef(null);
+  const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
-  });
+  })
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"])
 
   return (
     <div
@@ -43,5 +43,5 @@ export default function MultiLayerParallax() {
         }}
       />
     </div>
-  );
+  )
 }

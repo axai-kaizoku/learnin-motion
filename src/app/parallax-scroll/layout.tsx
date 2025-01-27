@@ -5,5 +5,5 @@ export default function ParallaxLayout({
     <section className="bg-[#06141D] text-neutral-50 min-h-screen">
       {children}
     </section>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import Sidebar from "@/components/sidebar";
+import Sidebar from "@/components/sidebar"
 
 export default function RootLayout({
   children,
@@ -8,5 +8,5 @@ export default function RootLayout({
       <Sidebar />
       <div className="p-20">{children}</div>
     </section>
-  );
+  )
 }

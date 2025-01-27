@@ -1,11 +1,11 @@
-"use client";
-import { Button } from "@/components/ui/button";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
-import { Layout } from "./helpers/layout";
+"use client"
+import { Button } from "@/components/ui/button"
+import { AnimatePresence, motion } from "framer-motion"
+import { useState } from "react"
+import { Layout } from "./helpers/layout"
 
 export default function Basics() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true)
 
   return (
     <Layout title="Basics">
@@ -46,5 +46,5 @@ export default function Basics() {
         )}
       </AnimatePresence>
     </Layout>
-  );
+  )
 }

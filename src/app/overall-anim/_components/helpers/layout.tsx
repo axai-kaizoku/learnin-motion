@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-type Props = { children: React.ReactNode; title?: string; className?: string };
+type Props = { children: React.ReactNode; title?: string; className?: string }
 
 export const Layout = ({ children, title, className }: Props) => {
   return (
@@ -12,5 +12,5 @@ export const Layout = ({ children, title, className }: Props) => {
         {children}
       </div>
     </div>
-  );
-};
+  )
+}

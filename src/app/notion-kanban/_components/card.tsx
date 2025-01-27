@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import type { CardProps } from "../_types";
-import { DropIndicator } from "./drop-indicator";
-import { motion } from "framer-motion";
+import type { CardProps } from "../_types"
+import { DropIndicator } from "./drop-indicator"
+import { motion } from "framer-motion"
 
 export const Card = ({ column, id, title, handleDragStart }: CardProps) => {
   return (
@@ -20,5 +20,5 @@ export const Card = ({ column, id, title, handleDragStart }: CardProps) => {
         <p className="text-sm text-neutral-100">{title}</p>
       </motion.div>
     </>
-  );
-};
+  )
+}

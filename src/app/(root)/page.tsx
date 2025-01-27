@@ -1,10 +1,10 @@
-import { api } from "@/trpc/server";
-import { GreetBruh } from "./_components/greet";
+import { api } from "@/trpc/server"
+import { GreetBruh } from "./_components/greet"
 
 export default async function Home() {
-  const post = await api.post.getLatest();
+  const post = await api.post.getLatest()
 
-  const greet = await api.post.heyy({ text: post?.name ?? "" });
+  const greet = await api.post.heyy({ text: post?.name ?? "" })
   return (
     <div className="flex flex-col gap-10">
       <span className="font-mono text-9xl font-medium">Home.</span>
@@ -16,5 +16,5 @@ export default async function Home() {
         <GreetBruh />
       </div>
     </div>
-  );
+  )
 }

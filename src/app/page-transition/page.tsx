@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function PageTransition() {
   return (
@@ -10,5 +10,5 @@ export default function PageTransition() {
         </Button>
       </Link>
     </div>
-  );
+  )
 }

@@ -3,6 +3,6 @@ const config = {
   tabWidth: 2,
   htmlWhitespaceSensitivity: "ignore",
   printWidth: 90,
-};
+}
 
-export default config;
+export default config

@@ -1,41 +1,41 @@
-"use client";
-import { useState } from "react";
-import { Plus } from "lucide-react";
-import { motion } from "framer-motion";
+"use client"
+import { useState } from "react"
+import { Plus } from "lucide-react"
+import { motion } from "framer-motion"
 
-import type { CardType, ColumnType, SetStateType } from "../_types";
+import type { CardType, ColumnType, SetStateType } from "../_types"
 
 export const AddCard = ({
   column,
   setCards,
 }: {
-  column: ColumnType;
-  setCards: SetStateType<CardType[]>;
+  column: ColumnType
+  setCards: SetStateType<CardType[]>
 }) => {
-  const [text, setText] = useState("");
-  const [adding, setAdding] = useState(false);
+  const [text, setText] = useState("")
+  const [adding, setAdding] = useState(false)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    if (!text.trim().length) return;
+    if (!text.trim().length) return
 
     const newCard = {
       column,
       title: text.trim(),
       id: Math.random().toString(),
-    };
+    }
 
-    setCards((p) => [...p, newCard]);
-    setAdding(false);
-  };
+    setCards((p) => [...p, newCard])
+    setAdding(false)
+  }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
-      e.preventDefault();
-      handleSubmit(e as never);
+      e.preventDefault()
+      handleSubmit(e as never)
     }
-  };
+  }
 
   return (
     <>
@@ -76,5 +76,5 @@ export const AddCard = ({
         </motion.button>
       )}
     </>
-  );
-};
+  )
+}

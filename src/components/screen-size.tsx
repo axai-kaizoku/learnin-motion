@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from "next/link"
 
 export const ScreenSize = () => {
   return (
-    <div className="fixed bottom-4 bg-muted right-4 z-[1000] flex h-12 w-12 items-center justify-center rounded-md ring-1 ring-muted-foreground">
+    <div className="fixed bottom-4 bg-muted right-4 z-[1000] flex h-12 w-12 items-center justify-center rounded-3xl ring-1 ring-muted-foreground">
       <Link href="/">
         <div className="block sm:hidden">sm</div>
         {/* Small screens (smaller than 640px) */}
@@ -18,5 +18,5 @@ export const ScreenSize = () => {
         {/* 2X large and above (1536px and up) */}
       </Link>
     </div>
-  );
-};
+  )
+}

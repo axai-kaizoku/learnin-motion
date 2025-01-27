@@ -1,48 +1,48 @@
-"use client";
+"use client"
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { motion, useAnimationControls } from "framer-motion";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { useState } from "react";
-import { Layout } from "./helpers/layout";
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { motion, useAnimationControls } from "framer-motion"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
+import { useState } from "react"
+import { Layout } from "./helpers/layout"
 
 const FormSchema = z.object({
   email: z.string().email(),
   otp: z.string().length(6),
-});
+})
 
-type FormType = z.infer<typeof FormSchema>;
+type FormType = z.infer<typeof FormSchema>
 
 export function FormBased() {
-  const [state, setState] = useState("0");
-  const controls = useAnimationControls();
+  const [state, setState] = useState("0")
+  const controls = useAnimationControls()
 
   const form = useForm<FormType>({
     resolver: zodResolver(FormSchema),
     mode: "onTouched",
     defaultValues: { email: "", otp: "" },
-  });
+  })
 
   const handleNext = () => {
-    const emailState = form.getFieldState("email");
+    const emailState = form.getFieldState("email")
     if (!emailState.invalid) {
-      void controls.start("move");
-      setState("1");
+      void controls.start("move")
+      setState("1")
     }
-  };
+  }
 
   const onSubmit = (data: FormType) => {
-    console.log("FORM SUBMITTED");
-    console.log(data);
-  };
+    console.log("FORM SUBMITTED")
+    console.log(data)
+  }
 
   return (
     <Layout title="ViewBased">
@@ -131,5 +131,5 @@ export function FormBased() {
         </Form>
       </motion.div>
     </Layout>
-  );
+  )
 }

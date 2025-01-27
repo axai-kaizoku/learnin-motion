@@ -1,4 +1,4 @@
-import MultiLayerParallax from "./_components/multi-layer-parallax";
+import MultiLayerParallax from "./_components/multi-layer-parallax"
 
 export default function ParallexScroll() {
   return (
@@ -81,5 +81,5 @@ export default function ParallexScroll() {
         </div>
       </div>
     </div>
-  );
+  )
 }

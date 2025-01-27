@@ -1,6 +1,6 @@
-"use client";
-import { motion, MotionConfig } from "framer-motion";
-import { Layout } from "./helpers/layout";
+"use client"
+import { motion, MotionConfig } from "framer-motion"
+import { Layout } from "./helpers/layout"
 
 export default function Gestures() {
   return (
@@ -23,5 +23,5 @@ export default function Gestures() {
       </MotionConfig>
       <div className="h-20" />
     </Layout>
-  );
+  )
 }

@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { DEFAULT_CARDS } from "@/constants";
-import { Column } from "./column";
-import { BurnBarrel } from "./burn-barrel";
-import type { CardType } from "../_types";
+import { useState } from "react"
+import { DEFAULT_CARDS } from "@/constants"
+import { Column } from "./column"
+import { BurnBarrel } from "./burn-barrel"
+import type { CardType } from "../_types"
 
 export const Board = () => {
-  const [cards, setCards] = useState<CardType[]>(DEFAULT_CARDS);
+  const [cards, setCards] = useState<CardType[]>(DEFAULT_CARDS)
   return (
     <div className="flex h-full w-full gap-6 overflow-scroll p-12">
       <Column
@@ -40,5 +40,5 @@ export const Board = () => {
       />
       <BurnBarrel setCards={setCards} />
     </div>
-  );
-};
+  )
+}

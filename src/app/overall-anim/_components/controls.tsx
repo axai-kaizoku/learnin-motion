@@ -1,15 +1,15 @@
-"use client";
-import { motion, useAnimationControls } from "framer-motion";
-import { Layout } from "./helpers/layout";
+"use client"
+import { motion, useAnimationControls } from "framer-motion"
+import { Layout } from "./helpers/layout"
 
 export default function Controls() {
-  const controls = useAnimationControls();
+  const controls = useAnimationControls()
   const handleClick = () => {
-    void controls.start("flip");
-  };
+    void controls.start("flip")
+  }
   const handleReflip = () => {
-    void controls.start("initial");
-  };
+    void controls.start("initial")
+  }
   return (
     <Layout title="Controls" className="gap-8">
       <div className="flex gap-4">
@@ -35,5 +35,5 @@ export default function Controls() {
         className="h-52 w-52 rounded-tr-full border bg-muted"
       />
     </Layout>
-  );
+  )
 }

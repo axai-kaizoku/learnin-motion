@@ -1,4 +1,4 @@
-import { type Card } from "@/app/notion-kanban/_components/card";
+import { type Card } from "@/app/notion-kanban/_components/card"
 
 export const navLinks = [
   "/on-scroll-reveal",
@@ -7,7 +7,7 @@ export const navLinks = [
   "/page-transition",
   "/parallax-scroll",
   "/notion-kanban",
-];
+]
 
 export const DEFAULT_CARDS: Card[] = [
   {
@@ -70,4 +70,4 @@ export const DEFAULT_CARDS: Card[] = [
     id: "12",
     column: "done",
   },
-];
+]

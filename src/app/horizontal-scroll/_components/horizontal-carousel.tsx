@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import { Card, cards } from "./card";
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
+import { Card, cards } from "./card"
 
 export const HorizontalScrollCarousel = () => {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null)
 
   const { scrollYProgress } = useScroll({
     target: ref,
-  });
+  })
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"])
 
   return (
     <section ref={ref} className="relative h-[300vh] bg-neutral-900">
@@ -23,5 +23,5 @@ export const HorizontalScrollCarousel = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+}

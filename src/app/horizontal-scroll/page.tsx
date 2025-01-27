@@ -1,4 +1,4 @@
-import { HorizontalScrollCarousel } from "./_components/horizontal-carousel";
+import { HorizontalScrollCarousel } from "./_components/horizontal-carousel"
 
 export default function HorizontalScroll() {
   return (
@@ -15,5 +15,5 @@ export default function HorizontalScroll() {
         </span>
       </div>
     </div>
-  );
+  )
 }
