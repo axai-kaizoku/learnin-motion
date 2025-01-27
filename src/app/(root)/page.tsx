@@ -3,7 +3,7 @@ import { GreetBruh } from "./_components/greet";
 
 export default async function Home() {
   const post = await api.post.getLatest();
-  // const posts = await api.post.getAll();
+
   const greet = await api.post.heyy({ text: post?.name ?? "" });
   return (
     <div className="flex flex-col gap-10">
@@ -14,7 +14,6 @@ export default async function Home() {
           so, you can get everything about framer-motion from here
         </span>
         <GreetBruh />
-        {/* {JSON.stringify(posts)} */}
       </div>
     </div>
   );
